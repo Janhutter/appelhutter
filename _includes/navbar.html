@@ -1,0 +1,18 @@
+<nav class="nav">
+    {% for item in site.data.items %}
+        <!-- if it has subitems -->
+        {% if item.subitems and item.subitems | length > 1 %}
+            <span class="nav-item dropdown">
+                <div onclick="Gotolink('{{ item.ref }}')">{{ item.name | capitalize }} <span class="chevron-span"><i class="fa-solid fa-chevron-down"></i></span></div>
+                <div class="dropdown-content" id="dropdown-content">
+                    {% for subitem in item.subitems %}
+                        <span class="nav-item" onclick="Gotolink('{{ subitem.ref }}')">{{ subitem.name | capitalize }}</span>
+                    {% endfor %}
+                </div>
+            </span>
+        {% else %}
+            <!-- if it doesn't have subitems -->
+            <span class="nav-item" onclick="Gotolink('{{ item.ref }}')">{{ item.name | capitalize }}</span>
+        {% endif %}
+    {% endfor %}
+</nav>

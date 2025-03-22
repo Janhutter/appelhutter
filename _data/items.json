@@ -1,0 +1,6 @@
+[
+{"name": "home", "ref":"/"},
+{"name": "spoed", "ref":"/spoed"},
+{"name": "Praktijkinfo", "ref":"", "subitems": [{"name": "Spreekuur", "ref": "/spreekuur"}]},
+{"name": "contact", "ref":"/contact"}
+]

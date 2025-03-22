@@ -1,0 +1,11 @@
+permalink: pretty
+
+collections:
+  blog:
+    output: true
+    permalink: /:title/
+
+
+# favicon is located in assets/images/favicon.ico
+# so add that path to the config file
+favicon: /assets/images/favicon.ico
